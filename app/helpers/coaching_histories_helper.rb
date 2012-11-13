@@ -1,0 +1,2 @@
+module CoachingHistoriesHelper
+end

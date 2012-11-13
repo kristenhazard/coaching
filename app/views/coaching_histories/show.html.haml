@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Coach:
+  = @coaching_history.coach_id
+%p
+  %b Team:
+  = @coaching_history.team_id
+%p
+  %b Year:
+  = @coaching_history.year
+%p
+  %b Role:
+  = @coaching_history.role
+
+= link_to 'Edit', edit_coaching_history_path(@coaching_history)
+\|
+= link_to 'Back', coaching_histories_path

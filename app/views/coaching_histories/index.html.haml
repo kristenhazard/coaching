@@ -1,0 +1,25 @@
+%h1 Listing coaching_histories
+
+%table
+  %tr
+    %th Coach
+    %th Team
+    %th Year
+    %th Role
+    %th
+    %th
+    %th
+
+  - @coaching_histories.each do |coaching_history|
+    %tr
+      %td= coaching_history.coach_id
+      %td= coaching_history.team_id
+      %td= coaching_history.year
+      %td= coaching_history.role
+      %td= link_to 'Show', coaching_history
+      %td= link_to 'Edit', edit_coaching_history_path(coaching_history)
+      %td= link_to 'Destroy', coaching_history, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Coaching history', new_coaching_history_path
